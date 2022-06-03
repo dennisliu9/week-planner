@@ -1,7 +1,23 @@
 var $daySelectorRow = document.querySelector('#day-selector-row');
+var daysData = [];
+
 $daySelectorRow.addEventListener('click', function (event) {
   if (event.target.tagName === 'BUTTON') {
-    var daysData = data[event.target.textContent];
+    daysData = data[event.target.textContent];
+  }
+  var $tableBody = document.querySelector('tbody');
+
+  var entriesCount = 0;
+
+  if ($tableBody.children.length > daysData.length) {
+    entriesCount = daysData.length;
+  } else {
+    entriesCount = $tableBody.children.length;
+  }
+
+  for (var rowIdx = 0; rowIdx < entriesCount; rowIdx++) {
+    $tableBody.children[rowIdx].children[0].textContent = daysData[rowIdx].time;
+    $tableBody.children[rowIdx].children[1].textContent = daysData[rowIdx].desc;
   }
 });
 
@@ -53,8 +69,3 @@ $submit.addEventListener('click', function (event) {
 // $modalScreen.addEventListener('click', function (event) {
 //   $modal.classList.add('invisible');
 // });
-
-var $tableBody = document.querySelector('tbody');
-for (var rowIdx = 0; rowIdx < $tableBody.children.length; rowIdx++) {
-  console.log($tableBody.children[rowIdx]);
-}
