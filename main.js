@@ -1,8 +1,7 @@
 var $daySelectorRow = document.querySelector('#day-selector-row');
 $daySelectorRow.addEventListener('click', function (event) {
   if (event.target.tagName === 'BUTTON') {
-    // console.log(event.target);
-    // console.log(event.target.textContent);
+    var daysData = data[event.target.textContent];
   }
 });
 
@@ -54,3 +53,8 @@ $submit.addEventListener('click', function (event) {
 // $modalScreen.addEventListener('click', function (event) {
 //   $modal.classList.add('invisible');
 // });
+
+var $tableBody = document.querySelector('tbody');
+for (var rowIdx = 0; rowIdx < $tableBody.children.length; rowIdx++) {
+  console.log($tableBody.children[rowIdx]);
+}
