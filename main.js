@@ -1,12 +1,23 @@
-var data = {
-  Monday: [],
-  Tuesday: [],
-  Wednesday: [],
-  Thursday: [],
-  Friday: [],
-  Saturday: [],
-  Sunday: []
-};
+var dataEntries = localStorage.getItem('data-entries');
+var data = {};
+if (dataEntries !== null) {
+  data = JSON.parse(dataEntries);
+} else {
+  data = {
+    Monday: [],
+    Tuesday: [],
+    Wednesday: [],
+    Thursday: [],
+    Friday: [],
+    Saturday: [],
+    Sunday: []
+  };
+}
+
+window.addEventListener('beforeunload', function (event) {
+  var dataJSON = JSON.stringify(data);
+  this.localStorage.setItem('data-entries', dataJSON);
+});
 
 var $modal = document.querySelector('.modal-screen');
 var $entryButton = document.querySelector('#add-entry');
