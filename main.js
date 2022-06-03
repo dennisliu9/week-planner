@@ -7,15 +7,7 @@ $daySelectorRow.addEventListener('click', function (event) {
   }
   var $tableBody = document.querySelector('tbody');
 
-  var entriesCount = 0;
-
-  if ($tableBody.children.length > daysData.length) {
-    entriesCount = daysData.length;
-  } else {
-    entriesCount = $tableBody.children.length;
-  }
-
-  for (var rowIdx = 0; rowIdx < entriesCount; rowIdx++) {
+  for (var rowIdx = 0; rowIdx < $tableBody.children.length; rowIdx++) {
     $tableBody.children[rowIdx].children[0].textContent = daysData[rowIdx].time;
     $tableBody.children[rowIdx].children[1].textContent = daysData[rowIdx].desc;
   }
