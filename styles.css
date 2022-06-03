@@ -33,3 +33,19 @@
   background-color: lime;
   border: solid 1px red;
 }
+
+.table-style {
+  width: 90%;
+  border: 1px solid black;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+tr:not(:first-child) {
+  text-align: center;
+  background: grey;
+}
