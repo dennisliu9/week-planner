@@ -68,12 +68,11 @@ body {
   width: 100px;
   height: 100px;
   background-color: lime;
-  border: solid 1px red;
 }
 
 .table-style {
   width: 90%;
-  border: 1px solid black;
+  border: none;
 }
 
 table,
@@ -89,6 +88,10 @@ thead tr {
 
 tbody tr:nth-child(odd) {
   background: grey;
+}
+
+td {
+  height: 20px;
 }
 
 .button {

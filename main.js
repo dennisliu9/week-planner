@@ -1,3 +1,11 @@
+var $daySelectorRow = document.querySelector('#day-selector-row');
+$daySelectorRow.addEventListener('click', function (event) {
+  if (event.target.tagName === 'BUTTON') {
+    // console.log(event.target);
+    // console.log(event.target.textContent);
+  }
+});
+
 var dataEntries = localStorage.getItem('data-entries');
 var data = {};
 if (dataEntries !== null) {
