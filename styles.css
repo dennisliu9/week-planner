@@ -3,6 +3,10 @@
   margin: 0 auto;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 .row {
   display: flex;
 }
@@ -42,10 +46,25 @@
 table,
 th,
 td {
-  border: 1px solid black;
+  border: none;
+  text-align: center;
 }
 
-tr:not(:first-child) {
-  text-align: center;
+thead tr {
+  background: lightcyan;
+}
+
+tbody tr:nth-child(odd) {
   background: grey;
+}
+
+.button {
+  background-color: blue;
+  border-radius: 5px;
+  color: white;
+  padding: 0.5rem;
+}
+
+.button:hover {
+  filter: brightness(1.5);
 }
