@@ -43,6 +43,11 @@ body {
   margin: 0;
 }
 
+.padding-tb-1r {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .modal-screen {
   min-height: 100vh;
   background: rgb(0 0 0 / 70%);

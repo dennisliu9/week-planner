@@ -12,10 +12,10 @@
 
   <div class="modal-screen row justify-center align-center invisible">
     <div class="modal-box">
-      <form>
+      <form id="entry-form">
         <h1 class="margin-0">Update Entry</h1>
         <div class="row">
-          <select>
+          <select name="day">
             <option>Day of the Week</option>
             <option value="Sunday">Sunday</option>
             <option value="Monday">Monday</option>
@@ -25,7 +25,7 @@
             <option value="Friday">Friday</option>
             <option value="Saturday">Saturday</option>
           </select>
-          <select>
+          <select name="time">
             <option>Time</option>
             <option value="00:00">12:00am</option>
             <option value="01:00">01:00am</option>
@@ -55,7 +55,7 @@
         </div>
         <div class="row">
           <div class="column-full">
-            <textarea placeholder="Description" rows="10"></textarea>
+            <textarea name="desc" placeholder="Description" rows="10"></textarea>
           </div>
         </div>
         <div class="row justify-end">
@@ -72,7 +72,7 @@
     </div>
   </div>
   <!-- Days of the week -->
-  <div class="row  invisible">
+  <div class="row">
     <!-- center here later-->
     <div class="column-1-7 text-center">
       <button class="days-box">Sunday</button>
@@ -97,17 +97,17 @@
     </div>
   </div>
   <!-- Add Entry button -->
-  <div class="row justify-center">
+  <div class="row justify-center padding-tb-1r">
     <button class="button" id="add-entry">Add Entry</button>
   </div>
   <!-- Scheduled events for ____ -->
-  <div class="row  invisible">
+  <div class="row">
     <div class="column-full text-center">
       <h2> Scheduled Events for Day </h2>
     </div>
   </div>
   <!-- table -->
-  <div class="row  invisible justify-center">
+  <div class="row justify-center">
     <table class="table-style">
       <thead>
         <tr>
