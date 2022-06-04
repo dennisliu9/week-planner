@@ -17,9 +17,9 @@
   <div class="modal-screen row justify-center align-center invisible">
     <div class="modal-box">
       <form id="entry-form">
-        <h1 class="margin-0">Update Entry</h1>
+        <h1 class="margin-0 font-handwriting">Update Entry</h1>
         <div class="row">
-          <select name="day">
+          <select class="font-sans" name="day">
             <option>Day of the Week</option>
             <option value="Sunday">Sunday</option>
             <option value="Monday">Monday</option>
@@ -29,7 +29,7 @@
             <option value="Friday">Friday</option>
             <option value="Saturday">Saturday</option>
           </select>
-          <select name="time">
+          <select class="font-sans" name="time">
             <option>Time</option>
             <option value="00:00">12:00am</option>
             <option value="01:00">01:00am</option>
@@ -59,11 +59,11 @@
         </div>
         <div class="row">
           <div class="column-full">
-            <textarea name="desc" placeholder="Description" rows="10"></textarea>
+            <textarea name="desc" placeholder="What're ya plannin...?" rows="10"></textarea>
           </div>
         </div>
         <div class="row justify-end">
-          <input type="submit" id="submit-button">
+          <input class="button font-sans" type="submit" id="submit-button">
         </div>
 
       </form>
@@ -112,7 +112,7 @@
   </div>
   <!-- table -->
   <div id="table-container" class="row justify-center">
-    <table class="table-style font-sans">
+    <table class="table-style font-sans ">
       <thead>
         <tr>
           <th scope="col">Time</th>

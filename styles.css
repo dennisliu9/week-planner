@@ -93,7 +93,7 @@ table,
 th,
 td {
   border: none;
-  text-align: center;
+  text-align: left;
 }
 
 thead tr {
@@ -130,4 +130,14 @@ textarea {
   width: 100%;
   resize: none;
   margin-bottom: 10px;
+}
+
+textarea:focus {
+  border: 3px solid;
+  border-color:
+    linear-gradient(
+      to right,
+      rgb(91, 156, 225),
+      rgb(226, 238, 122)
+    );
 }
