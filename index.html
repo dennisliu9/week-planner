@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Week Planner</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Nanum+Gothic+Coding&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -67,7 +71,7 @@
   </div>
 
   <div class="row">
-    <div class="column-full text-center">
+    <div class="column-full text-center font-handwriting">
       <h1>Weekly Planner</h1>
     </div>
   </div>
@@ -75,40 +79,40 @@
   <div class="row" id="day-selector-row">
     <!-- center here later-->
     <div class="column-1-7 text-center">
-      <button class="days-box">Sunday</button>
+      <button class="days-box font-sans">Sunday</button>
     </div>
     <div class="column-1-7 text-center">
-      <button class="days-box">Monday</button>
+      <button class="days-box font-sans">Monday</button>
     </div>
     <div class="column-1-7 text-center">
-      <button class="days-box">Tuesday</button>
+      <button class="days-box font-sans">Tuesday</button>
     </div>
     <div class="column-1-7 text-center">
-      <button class="days-box">Wednesday</button>
+      <button class="days-box font-sans">Wednesday</button>
     </div>
     <div class="column-1-7 text-center">
-      <button class="days-box">Thursday</button>
+      <button class="days-box font-sans">Thursday</button>
     </div>
     <div class="column-1-7 text-center">
-      <button class="days-box">Friday</button>
+      <button class="days-box font-sans">Friday</button>
     </div>
     <div class="column-1-7 text-center">
-      <button class="days-box">Saturday</button>
+      <button class="days-box font-sans">Saturday</button>
     </div>
   </div>
   <!-- Add Entry button -->
-  <div class="row justify-center padding-tb-1r">
-    <button class="button" id="add-entry">Add Entry</button>
+  <div class="row justify-center padding-tb-2r">
+    <button class="button font-sans" id="add-entry">Add Entry</button>
   </div>
   <!-- Scheduled events for ____ -->
   <div class="row">
-    <div class="column-full text-center">
-      <h2> Scheduled Events for Day </h2>
+    <div class="column-full text-center font-handwriting">
+      <h2 id="schedule-message">Schedule</h2>
     </div>
   </div>
   <!-- table -->
   <div id="table-container" class="row justify-center">
-    <table class="table-style">
+    <table class="table-style font-sans">
       <thead>
         <tr>
           <th scope="col">Time</th>

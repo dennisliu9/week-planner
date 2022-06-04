@@ -1,10 +1,13 @@
 var $daySelectorRow = document.querySelector('#day-selector-row');
+var $scheduleMessage = document.querySelector('#schedule-message');
 var daysData = [];
 
 $daySelectorRow.addEventListener('click', function (event) {
   if (event.target.tagName === 'BUTTON') {
-    daysData = data[event.target.textContent];
+    var selectedDay = event.target.textContent;
+    daysData = data[selectedDay];
     var sortedDaysData = daysData.sort((a, b) => (a.time > b.time) ? 1 : -1);
+    $scheduleMessage.textContent = 'Scheduled Events for ' + selectedDay;
   }
   var $tableBody = document.querySelector('tbody');
 
