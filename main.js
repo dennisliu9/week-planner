@@ -4,12 +4,18 @@ var daysData = [];
 $daySelectorRow.addEventListener('click', function (event) {
   if (event.target.tagName === 'BUTTON') {
     daysData = data[event.target.textContent];
+    var sortedDaysData = daysData.sort((a, b) => (a.time > b.time) ? 1 : -1);
   }
   var $tableBody = document.querySelector('tbody');
 
   for (var rowIdx = 0; rowIdx < $tableBody.children.length; rowIdx++) {
-    $tableBody.children[rowIdx].children[0].textContent = daysData[rowIdx].time;
-    $tableBody.children[rowIdx].children[1].textContent = daysData[rowIdx].desc;
+    if (sortedDaysData[rowIdx] === undefined) {
+      $tableBody.children[rowIdx].children[0].textContent = '';
+      $tableBody.children[rowIdx].children[1].textContent = '';
+    } else {
+      $tableBody.children[rowIdx].children[0].textContent = sortedDaysData[rowIdx].time;
+      $tableBody.children[rowIdx].children[1].textContent = sortedDaysData[rowIdx].desc;
+    }
   }
 });
 

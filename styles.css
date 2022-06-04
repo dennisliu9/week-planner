@@ -67,7 +67,13 @@ body {
 .days-box {
   width: 100px;
   height: 100px;
-  background-color: lime;
+  border-radius: 99px;
+  color: rgb(0, 0, 0);
+  background: linear-gradient(to right, rgb(91, 156, 225), rgb(226, 238, 122));
+}
+
+.days-box:hover {
+  background: transparent;
 }
 
 .table-style {
@@ -95,10 +101,11 @@ td {
 }
 
 .button {
-  background-color: blue;
   border-radius: 5px;
   color: white;
   padding: 0.5rem;
+  background: linear-gradient(to right, rgb(8, 8, 121), rgb(64, 176, 213));
+  border: none;
 }
 
 .button:hover {
